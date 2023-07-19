@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+.app-wrap{
+  width: 100%;
+  margin: 0 auto;
+  height: 2000px;  
+  background: burlywood;
+}
