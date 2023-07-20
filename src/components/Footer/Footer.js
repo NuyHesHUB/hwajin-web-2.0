@@ -1,9 +1,15 @@
 import React from 'react';
+import "../../styled/Footer.css";
+import Logo from "../../image/footer-logo.png";
 
 const Footer = () => {
     return (
         <div className='footer-wrap'>
-            Footer
+            <div className='footer'>
+                <div className='logo-wrap'>
+                    <img style={{width:'240px'}} src={Logo} alt="footer-logo"/>
+                </div>
+            </div>
         </div>
     );
 };

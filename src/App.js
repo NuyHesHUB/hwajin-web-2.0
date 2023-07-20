@@ -12,11 +12,11 @@ function App() {
     <div className='app-wrap'>
         <Router>
             <Header/> 
-            <Routes>
-                <Route exact path="/" element={<Home/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/contact" element={<Contact/>} />
-            </Routes>
+                <Routes>
+                    <Route exact path="/" element={<Home/>} />
+                    <Route path="/about" element={<About/>} />
+                    <Route path="/contact" element={<Contact/>} />
+                </Routes>
             <Footer/>
         </Router>
     </div>

@@ -1,3 +1,20 @@
 .home-wrap{
-    height: 1000px;
+    margin-top: 80px;
+    height: 2000px;
+}
+.img-wrap{
+    width: 100vw;
+    height: 700px;
+    position: relative;
+}
+.title-wrap{
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    z-index: 99;
+    font-size: 36px;
+    color: #fff;
+}
+.slide-img{
+    filter: brightness(80%);
 }
