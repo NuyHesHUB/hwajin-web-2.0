@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../../styled/header.css';
 
 import Logo from '../../image/logo.png';
 
 const Header = () => {
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    const handleScroll = () => {
+        const currentScrollPos = window.pageYOffset;
+        setVisible(prevScrollPos > currentScrollPos);
+        setPrevScrollPos(currentScrollPos);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [prevScrollPos]);
+    
     return (
-        <div className='header-wrap'>
+        <div className={`header-wrap ${visible ? '' : 'hidden'}`}>
             <div className='header'>
                 <div className='menu'>
                     <div className='left-wrap'>
