@@ -19,9 +19,9 @@ const Home = () => {
             <div style={{margin:'80px 0'}}>
                 <h1 style={{textAlign:'center'}}>BUSINESS</h1>
                 <div>
-                    <ul style={{listStyle:'none',display:'flex',padding:'0',textAlign:'center'}}>
-                        <li style={{display:'inline-block', width:'30%'}}><img style={{width:'100%'}} src={Car} alt="Car"/></li>
-                        <li style={{display:'inline-block', width:'30%'}}><img style={{width:'100%'}} src={Hr} alt="Hr"/></li>
+                    <ul style={{listStyle:'none',display:'flex',padding:'0',justifyContent:'center'}}>
+                        <li style={{display:'inline-block', width:'30%',marginRight:'20px'}}><img style={{width:'100%'}} src={Car} alt="Car"/></li>
+                        <li style={{display:'inline-block', width:'30%',marginRight:'20px'}}><img style={{width:'100%',height:'280.37px'}} src={Hr} alt="Hr"/></li>
                         <li style={{display:'inline-block', width:'30%'}}><img style={{width:'100%'}} src={Hotel} alt="Hotel"/></li>
                     </ul>
                 </div>
