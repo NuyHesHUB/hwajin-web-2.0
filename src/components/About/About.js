@@ -1,8 +1,9 @@
 import React from 'react';
+import "../../styled/About.css";
 
 const About = () => {
     return (
-        <div>
+        <div className='about-wrap'>
             about
         </div>
     );
