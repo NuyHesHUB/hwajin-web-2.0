@@ -1,5 +1,4 @@
 .home-wrap{
-    
     /* height: 2000px; */
     max-width: 1920px;
     margin: 0 auto;
@@ -20,14 +19,17 @@
 .home-img-wrap > h2{
     font-family: 'Noto Sans KR', sans-serif;
     position: absolute;
+    text-align: left;
     top: 56px;
     left: 70px;
     color: #fff;
     font-weight: normal;
     font-size: 60px;
+    pointer-events: none;
 }
 .home-img-wrap > h2 > u{
     text-decoration: none;
+    font-size: 65px;
     font-weight: bold;
 }
 .contents-wrap{
@@ -80,7 +82,99 @@
 }
 .contents-wrap > .service-wrap img:hover{
     transform: scale(1.05);
+    filter: brightness(50%);
 }
-.contents-wrap > .service-wrap h3:hover{
-    transform: scale(1.05);
+/* .contents-wrap > .service-wrap h3:hover{
+    transform: scale(2);
+} */
+
+.service-wrap{
+    margin-top: 92px;
+    height: 428px;
+}
+.service-wrap .service-img-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.service-wrap .service-img-wrap .large-img-wrap{
+    position: relative;
+    width: 356px;
+    height: 433px;
+    overflow: hidden;
+    border-radius: 62px;
+}
+.service-wrap .service-img-wrap .large-img-wrap > img{
+    width: 356px;
+    height: 433px;
+}
+.service-wrap .service-img-wrap .large-img-wrap > h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    font-size: 24px;
+}
+.service-wrap .service-img-wrap .text-ani > h3::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #3FA9F5;
+    transition: width 0.5s ease;
+}
+.service-wrap .service-img-wrap .text-ani:hover > h3::after{
+    width: 100%;
+}
+.service-wrap .service-img-wrap .column-wrap{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.service-wrap .service-img-wrap .column-wrap .small-img-wrap{
+    position: relative;
+    width: 365px;
+    height: 205px;
+    overflow: hidden;
+    border-radius: 62px;
+}
+.service-wrap .service-img-wrap .column-wrap .small-img-wrap > img{
+    width: 100%;
+}
+.service-wrap .service-img-wrap .column-wrap .small-img-wrap > h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    font-size: 24px;
+}
+.divider{
+    width: 1280px;
+    height: 2px;
+    background: #4e4e4e;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.bottom-content-wrap > h2{
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.bottom-content-wrap > p{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    color: #767676;
+    margin-top: 20px;
+    margin-bottom: 170px;
 }

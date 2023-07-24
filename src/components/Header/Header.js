@@ -26,85 +26,79 @@ const Header = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [prevScrollPos]);
     /*-------------------------------------*\
-               Header Scroll Event
+               Header Menu Event
     \*-------------------------------------*/
-    const [activeSubMenu, setActiveSubMenu] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleSubMenuToggle = (menu) => {
-      setActiveSubMenu(menu);
+    const handleMenuEnter = () => {
+        setMenuOpen(true);
+    };
+
+    const handleMenuLeave = () => {
+        setMenuOpen(false);
     };
 
     return (
         <div className={`header-wrap ${visible ? '' : 'hidden'}`}>
-            <div className='header'>
-                <div className='menu'>
-                    <div className='left-wrap'>
-                        <div style={{height:'100%'}}>
-                            <Link to="/"><img src={Logo} alt="logo" style={{width:'150px',marginTop:'10px'}}/></Link>
+            <div className='container'>
+                <div className='header-box'>
+                    <div className='header-left'>
+                        <div>
+                            <Link to="/">
+                                <img src={Logo} alt="logo" style={{width:'150px',marginTop:'10px'}}/>
+                            </Link>
                         </div>
                     </div>
-                    <div className='flex-wrap'>
+                    <div className='header-flex-wrap'>
                         <div className='center-wrap'>
                             <nav style={{ width: '100%', display: 'inline-block', height: '80px', lineHeight: '80px' }}>
-                                <ul>
+                                <ul className='menu-wrap'>
                                     <li>
-                                        <div
-                                            onMouseEnter={() => handleSubMenuToggle('company')}
-                                            onMouseLeave={() => handleSubMenuToggle(null)}
-                                        >
-                                        <Link to="/about">회사소개</Link>
-                                        <ul className={`submenu ${activeSubMenu === 'company' ? 'active' : ''}`}>
-                                            <li>
-                                            <Link to="/about">개요</Link>
-                                            </li>
-                                            {/* Add more submenu items for the 회사소개 menu if needed */}
-                                        </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div
-                                            onMouseEnter={() => handleSubMenuToggle('service')}
-                                            onMouseLeave={() => handleSubMenuToggle(null)}
-                                        >
-                                        <Link to="/service">서비스</Link>
-                                        {/* 서비스 서브메뉴 */}
-                                        <ul className={`submenu ${activeSubMenu === 'service' ? 'active' : ''}`}>
-                                            <div>
-                                                <li style={{background:'red',height:'100px'}}>
-                                                    <Link to="/service1">로봇</Link>
-                                                </li>
-                                                <li style={{background:'red',height:'100px'}}>
-                                                    <Link to="/service2">전기오토바이</Link>
-                                                </li>
-                                                <li style={{background:'red',height:'100px'}}>
-                                                    <Link to="/service3">아웃소싱</Link>
-                                                </li>
-                                            </div>
-                                        </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div
-                                            onMouseEnter={() => handleSubMenuToggle('partnership')}
-                                            onMouseLeave={() => handleSubMenuToggle(null)}
-                                        >
-                                        <Link to="/partnership">제휴 문의</Link>
-                                            <ul className={`submenu ${activeSubMenu === 'partnership' ? 'active' : ''}`}>
+                                        <div>
+                                            <Link to="/about">회사소개</Link>
+                                            {/* <ul>
                                                 <li>
-                                                <Link to="/partnership">문의하기</Link>
+                                                    <Link to="/about">개요</Link>
                                                 </li>
-                                                {/* Add more submenu items for the 회사소개 menu if needed */}
+                                            </ul> */}
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div onMouseEnter={handleMenuEnter} onMouseLeave={handleMenuLeave}>
+                                            <Link to="/service">서비스</Link>
+                                            <ul className={`sub-menu-wrap ${menuOpen ? 'open' : ''}`}>
+                                                <div className="sub-menu">
+                                                    <li>
+                                                        <Link to="/service1">로봇</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/service2">전기오토바이</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/service3">아웃소싱</Link>
+                                                    </li>
+                                                </div>
                                             </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <Link target="_blank" to="https://docs.google.com/forms/d/e/1FAIpQLSf6dlrvjzw4o7h7MUMh44l1UxDTeYaFZDaXBvQ41CsG1MVi2A/viewform?usp=pp_url">제휴 문의</Link>
+                                            {/* <ul>
+                                                <li>
+                                                    <Link to="/partnership">문의하기</Link>
+                                                </li>
+                                            </ul> */}
                                         </div>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
-                        <div className='right-wrap'>
+                        {/* <div className='right-wrap'>
                             <div className='shape'>
                                 <p>무료 견적</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
