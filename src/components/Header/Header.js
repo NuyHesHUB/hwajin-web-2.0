@@ -30,7 +30,7 @@ const Header = () => {
         };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [prevScrollPos]);
-    
+
     /*-------------------------------------*\
             Header 경로에 따라 밑줄 리셋
     \*-------------------------------------*/
@@ -62,6 +62,15 @@ const Header = () => {
     const handleMenuLeave = () => {
         setMenuOpen(false);
     }; */
+    const handleMenuToggle = () => {
+        const menuWrap = document.querySelector('.mobile-menu-wrap');
+        menuWrap.classList.toggle('open');
+    };
+    const handleMenuBtn = () => {
+        const menuWrap = document.querySelector('.menu-icon');
+        const subMenu = menuWrap.querySelector('.line'); // 자식 요소 중 .sub-menu 클래스를 가진 요소 선택
+        subMenu.classList.add('open'); // 선택한 요소에 open 클래스 추가
+    };
 
     return (
         <div className={`header-wrap ${visible ? '' : 'hidden'}`}>
@@ -70,13 +79,23 @@ const Header = () => {
                     <div className='header-left'>
                         <div>
                             <Link to="/">
-                                <img src={Logo} alt="logo" style={{width:'50%',marginTop:'22px'}}/>
+                                <img src={Logo} alt="logo" style={{width:'180px',marginTop:'22px'}}/>
                             </Link>
                         </div>
                     </div>
                     <div className='header-flex-wrap'>
                         <div className='center-wrap'>
                             <nav style={{ width: '100%', display: 'inline-block', height: '80px', lineHeight: '80px' }}>
+                                <div className="menu-icon" onClick={handleMenuToggle}>
+                                    <div className="line" onClick={handleMenuBtn}></div>
+                                    <div className="line" onClick={handleMenuBtn}></div>
+                                    <div className="line" onClick={handleMenuBtn}></div>
+                                </div>
+                                <ul className='mobile-menu-wrap open'>
+                                    <li><Link to="/about">회사소개</Link></li>
+                                    <li><Link to="/service">서비스</Link></li>
+                                    <li><Link to="/about">제휴 문의</Link></li>
+                                </ul>
                                 <ul className='menu-wrap'>
                                     <li>
                                         <div className={`menu-item ${activeMenu === 'about' ? 'active' : ''}`} onClick={() => handleMenuClick('about')}>
@@ -110,7 +129,8 @@ const Header = () => {
                                     </li>
                                     <li>
                                         <div className={`menu-item ${activeMenu === 'partnership' ? 'active' : ''}`} onClick={() => handleMenuClick('partnership')}>
-                                            <Link target="_blank" to="https://docs.google.com/forms/d/e/1FAIpQLSf6dlrvjzw4o7h7MUMh44l1UxDTeYaFZDaXBvQ41CsG1MVi2A/viewform?usp=pp_url">제휴 문의</Link>
+                                            {/* <Link target="_blank" to="https://docs.google.com/forms/d/e/1FAIpQLSf6dlrvjzw4o7h7MUMh44l1UxDTeYaFZDaXBvQ41CsG1MVi2A/viewform?usp=pp_url">제휴 문의</Link> */}
+                                            <Link to="/partnership">제휴 문의</Link>
                                             {/* <ul>
                                                 <li>
                                                     <Link to="/partnership">문의하기</Link>

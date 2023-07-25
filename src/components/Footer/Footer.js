@@ -9,7 +9,7 @@ const Footer = () => {
             <div className='footer'>
                 <div className='top-footer-wrap'>
                     <div className='logo-wrap'>
-                        <img style={{width:'320px'}} src={Logo} alt="footer-logo"/>
+                        <img src={Logo} alt="footer-logo"/>
                     </div>
                     <div className='menu-wrap'>
                         <div className='footer-contents'>
@@ -30,7 +30,7 @@ const Footer = () => {
                             <span>경기도 화성시 동탄첨단산업1로 51-9, 동탄엠타워 1619호 | </span>
                             <span>사업자등록번호: 123-45-678910</span>
                         </div>
-                        <div>
+                        <div className='mobile-none'>
                             <span>© Hwajin Robotics, Inc.</span>
                         </div>
                     </div>
