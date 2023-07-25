@@ -1,12 +1,58 @@
 .footer-wrap{
     position: relative;
     width: 100%;
-    margin: 0 auto;
-    padding: 74px 0 70px;
-    box-sizing: border-box;
-    text-align: right;
+    /* padding: 74px 0 70px; */
+    padding: 40px 0 40px;
     background: #3FA9F5;
 }
-.footer{
-    max-width: 1600px;
+.footer-wrap .footer{
+    max-width: 1280px;
+    margin: 0 auto;
 }
+.footer-wrap .footer .top-footer-wrap{
+    display: flex;
+}
+.footer-wrap .footer .top-footer-wrap .menu-wrap{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+/* .footer-wrap .footer .top-footer-wrap .menu-wrap .footer-contents{} */
+
+.footer-wrap .footer .top-footer-wrap .menu-wrap .footer-contents > a{
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.footer-wrap .footer .top-footer-wrap .menu-wrap .footer-contents > a::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -75px;
+    width: 2px;
+    height: 90%;
+    background: #fff;
+}
+.footer-wrap .footer .top-footer-wrap .menu-wrap .footer-contents:last-child > a::after{
+    width: 0;
+    height: 0;
+}
+.footer-wrap .footer .top-footer-wrap .menu-wrap .footer-contents:last-child > a{
+    margin: 0;
+}
+.footer-wrap .footer .bottom-footer-wrap{
+    font-size: 16px;
+    color: #fff;
+    margin-top: 30px;
+}
+.footer-wrap .footer .bottom-footer-wrap .flex-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+/* .footer-wrap .footer .bottom-footer-wrap .flex-wrap > p{} */
+/* .footer-wrap .footer .bottom-footer-wrap .flex-wrap > span{} */

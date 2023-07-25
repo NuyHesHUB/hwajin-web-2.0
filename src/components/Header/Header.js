@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../../styled/header.css';
 
-import Logo from '../../assets/image/logo.png';
+import Logo from '../../assets/image/robotos-logo.png';
 
 const Header = () => {
     /*-------------------------------------*\
@@ -10,6 +10,11 @@ const Header = () => {
     \*-------------------------------------*/
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
+    const [activeMenu, setActiveMenu] = useState('about');
+    
+    const handleMenuClick = (menu) => {
+        setActiveMenu(menu);
+      };
 
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
@@ -25,10 +30,30 @@ const Header = () => {
         };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [prevScrollPos]);
+    
     /*-------------------------------------*\
-               Header Menu Event
+            Header 경로에 따라 밑줄 리셋
     \*-------------------------------------*/
-    const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    useEffect(() => {
+        // 현재 경로에 따라 activeMenu 업데이트
+        if (currentPath === '/about') {
+        setActiveMenu('about');
+        } else if (currentPath === '/service') {
+        setActiveMenu('service');
+        } else if (currentPath === '/partnership') {
+        setActiveMenu('partnership');
+        } else {
+        setActiveMenu('');
+        }
+    }, [currentPath]);
+
+    /*-------------------------------------*\
+            Header 2Depth Menu Event
+    \*-------------------------------------*/
+    /* const [menuOpen, setMenuOpen] = useState(false);
 
     const handleMenuEnter = () => {
         setMenuOpen(true);
@@ -36,7 +61,7 @@ const Header = () => {
 
     const handleMenuLeave = () => {
         setMenuOpen(false);
-    };
+    }; */
 
     return (
         <div className={`header-wrap ${visible ? '' : 'hidden'}`}>
@@ -45,7 +70,7 @@ const Header = () => {
                     <div className='header-left'>
                         <div>
                             <Link to="/">
-                                <img src={Logo} alt="logo" style={{width:'150px',marginTop:'10px'}}/>
+                                <img src={Logo} alt="logo" style={{width:'50%',marginTop:'22px'}}/>
                             </Link>
                         </div>
                     </div>
@@ -54,7 +79,7 @@ const Header = () => {
                             <nav style={{ width: '100%', display: 'inline-block', height: '80px', lineHeight: '80px' }}>
                                 <ul className='menu-wrap'>
                                     <li>
-                                        <div>
+                                        <div className={`menu-item ${activeMenu === 'about' ? 'active' : ''}`} onClick={() => handleMenuClick('about')}>
                                             <Link to="/about">회사소개</Link>
                                             {/* <ul>
                                                 <li>
@@ -64,9 +89,11 @@ const Header = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <div onMouseEnter={handleMenuEnter} onMouseLeave={handleMenuLeave}>
+                                        {/* <div onMouseEnter={handleMenuEnter}onMouseLeave={handleMenuLeave}> */}
+                                        <div className={`menu-item ${activeMenu === 'service' ? 'active' : ''}`} onClick={() => handleMenuClick('service')}>
                                             <Link to="/service">서비스</Link>
-                                            <ul className={`sub-menu-wrap ${menuOpen ? 'open' : ''}`}>
+                                            {/* <ul className={`sub-menu-wrap ${menuOpen ? 'open' : ''}`}> */}
+                                            {/* <ul className="sub-menu-wrap">
                                                 <div className="sub-menu">
                                                     <li>
                                                         <Link to="/service1">로봇</Link>
@@ -78,11 +105,11 @@ const Header = () => {
                                                         <Link to="/service3">아웃소싱</Link>
                                                     </li>
                                                 </div>
-                                            </ul>
+                                            </ul> */}
                                         </div>
                                     </li>
                                     <li>
-                                        <div>
+                                        <div className={`menu-item ${activeMenu === 'partnership' ? 'active' : ''}`} onClick={() => handleMenuClick('partnership')}>
                                             <Link target="_blank" to="https://docs.google.com/forms/d/e/1FAIpQLSf6dlrvjzw4o7h7MUMh44l1UxDTeYaFZDaXBvQ41CsG1MVi2A/viewform?usp=pp_url">제휴 문의</Link>
                                             {/* <ul>
                                                 <li>
