@@ -1,7 +1,7 @@
 {
   "name": "web-test",
   "version": "0.1.0",
-  "homepage": "https://github.com/NuyHesHUB/hwajin-full",
+  "homepage": "https://nuyheshub.github.io/hwajin-full/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
