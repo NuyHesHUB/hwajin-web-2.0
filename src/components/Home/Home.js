@@ -10,11 +10,13 @@ import Etc from '../../assets/Home-img/etc-img.png';
 
 const Home = () => {
     return (
-        <div className='home-wrap'>
+        <div id="home" className='home-wrap'>
             <div className='container'>
-                <div className='home-img-wrap'>
-                    <img src={MainImg} alt="mainimage"/>
-                    <h2>중개플랫폼의 패러다임,<br/><u>화진 로보틱스</u>가 바꿔나갑니다</h2>
+                <div className='top-home-box'>
+                    <div className='home-img-wrap'>
+                        {/* <img src={MainImg} alt="mainimage"/> */}
+                        <h2>중개플랫폼의 패러다임,<br/><u>화진 로보틱스</u>가 바꿔나갑니다</h2>
+                    </div>
                 </div>
                 <div className='contents-wrap'>
                     <img src={Logo} alt='logo'/>
@@ -29,21 +31,21 @@ const Home = () => {
                     </div>
                     <div className='service-wrap'>
                         <div className='service-img-wrap'>
-                            <div className='large-img-wrap text-ani'>
+                            <div className='large-img-wrap text-ani number1'>
                                 <img src={Robot} alt="robotimage" />
                                 <h3>로봇</h3>
                             </div>
                             <div className='column-wrap'>
-                                <div className='small-img-wrap text-ani'>
+                                <div className='small-img-wrap text-ani number1'>
                                     <img src={Bike} alt="bikeimage"/>
                                     <h3>전기차.오토바이</h3>
                                 </div>
-                                <div className='small-img-wrap text-ani' style={{marginTop:'18px'}}>
+                                <div className='small-img-wrap text-ani mt18 number2'>
                                     <img src={Hr} alt="hrimage"/>
                                     <h3>아웃소싱</h3>
                                 </div>
                             </div>
-                            <div className='large-img-wrap text-ani'>
+                            <div className='large-img-wrap text-ani number2 mobile-none'>
                                 <img src={Etc} alt="etcimage"/>
                                 <h3>기타</h3>
                             </div>

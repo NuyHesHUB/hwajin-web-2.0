@@ -8,7 +8,7 @@ import BtmRobot from '../../assets/Service-img/service-bottom.png';
 
 const Service = () => {
     return (
-        <div className='total-service-wrap'>
+        <div id="service" className='total-service-wrap'>
             <div className='service-top-contents'>
                 <div className='service-top-box'></div>
                 <div className='service-img-wrap'>

@@ -4,7 +4,7 @@ import Hwajin from '../../assets/About-img/building.png';
 
 const About = () => {
     return (
-        <div className='about-wrap'>
+        <div id="about" className='about-wrap'>
             <div className='top-contents'>
                 <h2>화진 로보틱스 소개</h2>
                 <p>화진로보틱스는 자사 솔루션 및 플랫폼을 준비중인 스타트업입니다.</p>

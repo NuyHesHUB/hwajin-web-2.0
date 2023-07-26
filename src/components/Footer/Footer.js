@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import "../../styled/Footer.css";
 import Logo from "../../assets/image/footer-logo.png";
 
@@ -13,13 +13,13 @@ const Footer = () => {
                     </div>
                     <div className='menu-wrap'>
                         <div className='footer-contents'>
-                            <Link to="/about">기업 소개</Link>
+                            <Link to="about" smooth={true} duration={500}>기업 소개</Link>
                         </div>
                         <div className='footer-contents'>
-                            <Link to="/service">서비스 소개</Link>
+                            <Link to="service" smooth={true} duration={500}>서비스 소개</Link>
                         </div>
                         <div className='footer-contents'>
-                            <Link to="/partnership">제휴 문의</Link>
+                            <Link to="" smooth={true} duration={500}>제휴 문의</Link>
                         </div>
                     </div>
                 </div>

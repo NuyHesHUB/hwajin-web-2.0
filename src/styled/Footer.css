@@ -4,6 +4,7 @@
     /* padding: 74px 0 70px; */
     padding: 40px 0 40px;
     background: #3FA9F5;
+    overflow: hidden;
 }
 .footer-wrap .footer{
     max-width: 1280px;
