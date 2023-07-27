@@ -66,43 +66,7 @@
     font-size: 65px;
     font-weight: bold;
 }
-@media screen and (max-width: 1300px) {
-    .home-wrap{
-        padding-top: 0;
-    }
-    .home-wrap > .container{
-        padding-top: 0;
-    }
-    .home-img-wrap{
-        width: 100vw;
-    }
-    .home-img-wrap > h2{
-        font-size: 40px;
-        margin-left: 40px;
-    }
-    .home-img-wrap > h2 > u{
-        font-size: 45px;
-    }
-}
-@media screen and (max-width: 700px) {
-    .home-img-wrap > h2{
-        font-size: 30px;
-        margin-left: 25px;
-    }
-    .home-img-wrap > h2 > u{
-        font-size: 35px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .home-img-wrap > h2{
-        text-align: center;
-        font-size: 30px;
-        margin-left: 25px;
-    }
-    .home-img-wrap > h2 > u{
-        font-size: 35px;
-    }
-}
+
 /* @media screen and (max-width:1350px) {
     .home-wrap > .container{padding-top: 0; max-width: 100%;}
     .home-img-wrap{background: #000; }
@@ -273,6 +237,22 @@
     /* margin-bottom: 170px; */
 }
 @media screen and (max-width: 1300px) {
+    .home-wrap{
+        padding-top: 0;
+    }
+    .home-wrap > .container{
+        padding-top: 0;
+    }
+    .home-img-wrap{
+        width: 100vw;
+    }
+    .home-img-wrap > h2{
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    .home-img-wrap > h2 > u{
+        font-size: 45px;
+    }
     .divider{
         width: auto;
         margin-top: 90px;
@@ -352,16 +332,42 @@
         justify-content: center;
     }
 }
+@media screen and (max-width: 700px) {
+    .home-img-wrap{
+        justify-content: center;
+    }
+    .home-img-wrap > h2{
+        font-size: 30px;
+        text-align: center;
+        margin: 0;
+    }
+    .home-img-wrap > h2 > u{
+        font-size: 35px;
+    }
+}
 @media screen and (max-width: 680px) {
     .contents-wrap > h2{
         margin: 24px 24px;
         font-size: 19px;
     }
+    .bottom-content-wrap{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .bottom-content-wrap > h2{
-        font-size: 30px;
+        font-size: 25px;
     }
     .bottom-content-wrap > p{
         font-size: 14px;
         margin-bottom: 100px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .home-img-wrap > h2{
+        text-align: center;
+        font-size: 25px;
+    }
+    .home-img-wrap > h2 > u{
+        font-size: 30px;
     }
 }

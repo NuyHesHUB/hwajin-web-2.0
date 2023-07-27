@@ -1,6 +1,6 @@
 import React from 'react';
 import "../../styled/About.css";
-import Hwajin from '../../assets/About-img/building.png';
+/* import Hwajin from '../../assets/About-img/building.png'; */
 
 const About = () => {
     return (
