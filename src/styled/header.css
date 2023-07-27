@@ -1,5 +1,4 @@
 .header-wrap {
-  min-width: 1100px;
   width: 100%;
   position: fixed;
   background: #fff;
@@ -7,106 +6,48 @@
   right: 0;
   top: 0;
   z-index: 999;
-  transition: transform 0.5s ease;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .3));
 }
-
-@media screen and (max-width: 1000px) {
-  .header-wrap {
-    min-width: 0;
-  }
-}
-
-.header-wrap.hidden {
-  transform: translateY(-100%);
-}
-
-@media screen and (max-width: 1100px) {
-  .header-wrap.hidden {
-    transform: translateY(0);
-  }
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .header-box {
   margin: 0 auto;
-  width: 100%;
+  max-width: 1280px;
   height: 80px;
   display: flex;
+  position: relative;
 }
-
-@media screen and (max-width: 1350px) {
-  .header-box {
-    width: 80%;
-    justify-content: space-between;
-  }
-}
-
 .header-box .header-left {
   height: 100%;
   margin-right: 215px;
+  cursor: pointer;
 }
-
-@media screen and (max-width: 1350px) {
-  .header-box .header-left {
-    margin-right: 0;
-  }
+.header-box .header-left img{
+  width: 180px;
+  margin-top: 22px;
 }
-
-.header-box .header-left > div {
-  height: 100%;
-  text-align: left;
-}
-
 .header-box > .header-flex-wrap {
   display: flex;
   justify-content: end;
   width: 100%;
 }
-
-@media screen and (max-width: 1150px) {
-  .header-box > .header-flex-wrap {
-    width: 40%;
-  }
-}
-
-.center-wrap > nav {
-  width: 100%;
-  height: 80px;
-  display: inline-block;
+.header-right {
   line-height: 80px;
 }
-
-.center-wrap > nav > ul {
+.header-right > ul {
   list-style: none;
   text-align: center;
   margin: 0;
   padding: 0;
   display: flex;
 }
-
-.center-wrap > nav > ul > li {
+.header-right > ul > li {
   width: 70px;
   display: inline-block;
   margin-left: 100px;
 }
-
-.center-wrap > nav > ul > li:first-child {
+.header-right > ul > li:first-child {
   margin-left: 0;
 }
-
-@media screen and (max-width: 1150px) {
-  .center-wrap > nav > ul > li {
-    margin-left: 20px;
-  }
-}
-
-.center-wrap > nav > ul > li > div > a {
+.header-right > ul > li > div > a {
   text-decoration: none;
   color: #333;
   font-size: 17px;
@@ -114,8 +55,7 @@
   display: inline-block;
   position: relative;
 }
-
-.center-wrap > nav > ul > li > div::after {
+.header-right > ul > li > div::after {
   position: absolute;
   content: "";
   top: 55px;
@@ -125,46 +65,13 @@
   background-color: #3FA9F5;
   transition: width 0.3s ease;
 }
-
-.center-wrap > nav > ul > li > div:hover::after {
+.header-right > ul > li > div:hover::after {
   width: 100%;
 }
-
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  position: relative;
-  width: 25px;
-  height: 25px;
-}
-
-.center-wrap .mobile-menu-wrap {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .header-box {
-    position: relative;
-  }
-  .header-flex-wrap {
-    display: none;
-  }
-  .menu-icon {
-    display: block;
-  }
-  .center-wrap .menu-wrap {
-    display: none;
-  }
-  .center-wrap > nav {
-    margin-top: 25px;
-  }
-}
-
 .menu-wrap li div {
   position: relative;
 }
-
-.menu-wrap li div.active::after {
+/* .menu-wrap li div.active::after {
   position: absolute;
   content: "";
   top: 55px;
@@ -172,4 +79,98 @@
   width: 100%;
   height: 3px;
   background-color: #3FA9F5;
+} */
+
+.header-flex-wrap{
+  align-items: center;
+}
+.menu-toggle
+{
+  display: none;
+  width: 33px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 29px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #999;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 3px 1px;
+  transition: .3s;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle span:last-child
+{
+  margin-bottom: 0;
+}
+
+.menu-toggle.open span:nth-child(1)
+{
+  transform: rotate(45deg) translate(1px, -2px)
+}
+.menu-toggle.open span:nth-child(2)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-toggle.open span:nth-child(3)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+.mobile-menu{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-menu.open{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  max-height: 200px;
+}
+.mobile-menu ul{
+  list-style: none;
+}
+.mobile-menu ul li{
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+  .header-box{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header-box .header-left{
+    margin-right: 0;
+  }
+  .header-box .header-left img{
+    width: 160px;
+  }
+  .header-right{
+    display: none;
+  }
+  .menu-toggle{
+    display: block;
+  }
 }

@@ -10,7 +10,7 @@ const About = () => {
                 <p>화진로보틱스는 자사 솔루션 및 플랫폼을 준비중인 스타트업입니다.</p>
             </div>
             <div className='about-img-wrap'>
-                <img src={Hwajin} alt="building"/>
+                {/* <img src={Hwajin} alt="building"/> */}
             </div>
             <div className='bottom-contents'>
                 <h2>HWAJIN</h2>

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
 import '../../styled/Home.css';
-import MainImg from '../../assets/Home-img/home-img.png';
+/* import MainImg from '../../assets/Home-img/home-img.png'; */
 import Logo from '../../assets/image/h_logo.png';
 import Bike from '../../assets/Home-img/bike-img.png';
 import Robot from '../../assets/Home-img/robot-img.png';
@@ -57,6 +57,7 @@ const Home = () => {
                     <h2>기술로 다양성을 꽃피우는 플랫폼</h2>
                     <p>개인의 다양한 가능성이 의미있는 성공으로 꽃 피울 수 있도록<br/>서비스와 기술플랫폼을 통해 더 가까이 서포트(SUPPORT)합니다.</p>
                 </div>
+                <div className='divider'></div>
                 {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6dlrvjzw4o7h7MUMh44l1UxDTeYaFZDaXBvQ41CsG1MVi2A/viewform?embedded=true" width="640" height="1300" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe> */}
             </div>
         </div>
