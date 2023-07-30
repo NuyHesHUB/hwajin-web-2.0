@@ -12,8 +12,8 @@ const App = () => {
   return (
     <div className='app-wrap'>
       <Header/>
-      {/* <Home />
-      <About /> */}
+      <Home />
+      <About />
       <Service/>
       <Footer />
     </div>

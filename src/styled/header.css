@@ -40,7 +40,8 @@
   display: flex;
 }
 .header-right > ul > li {
-  width: 70px;
+  /* width: 70px; */
+  width: 80px;
   display: inline-block;
   margin-left: 100px;
 }
