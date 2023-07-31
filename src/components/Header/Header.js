@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import '../../styled/header.css';
 
 import Logo from '../../assets/image/robotos-logo.png';
 
 const Header = () => {
+    /* Scroll Header Bg Change */
+    const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        setScrolled(isScrolled);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll',handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    },[]);
+
+    /* Mobile menu */
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen((prevState) => !prevState);
@@ -14,7 +30,7 @@ const Header = () => {
         setIsMenuOpen(false);
     }; 
     return (
-        <header id='header' className="header-wrap">
+        <header id='header' className={scrolled ? 'header-scrolled' : 'header-wrap'}>
             <div className='header-box'>
                 <div className='header-left'>
                     <Link to="home" smooth={true} duration={500}>
@@ -30,22 +46,22 @@ const Header = () => {
                         </div>
                         
                     </div>
-                    <nav className='header-right'>
+                    <nav className={scrolled ? 'header-right scrolled' : 'header-right'}>
                         <ul className='menu-wrap'>
                             <li>
-                            <div>
-                                <Link style={{cursor:'pointer'}} to="about" smooth={true} duration={500}>회사소개</Link>
-                            </div>
+                                <div>
+                                    <Link style={{cursor:'pointer'}} to="about" smooth={true} duration={500}>회사소개</Link>
+                                </div>
                             </li>
                             <li>
-                            <div>
-                                <Link style={{cursor:'pointer'}} to="service" smooth={true} duration={500}>서비스</Link>
-                            </div>
+                                <div>
+                                    <Link style={{cursor:'pointer'}} to="service" smooth={true} duration={500}>서비스</Link>
+                                </div>
                             </li>
                             <li>
-                            <div>
-                                <a href='#Partnership'>제휴 문의</a>
-                            </div>
+                                <div>
+                                    <a href='#Partnership'>제휴 문의</a>
+                                </div>
                             </li>
                         </ul>
                     </nav>

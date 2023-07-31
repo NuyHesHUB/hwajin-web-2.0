@@ -1,0 +1,35 @@
+.platform-wrap{
+    width: 100%;
+    background: #000;
+}
+.platform-box{
+    width: 100%;
+    height: 500px;
+}
+.platform-item{
+    display: flex;
+    justify-content: center;
+}
+.item-contents{}
+.item-contents h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 80px;
+}
+.item-bg{
+    background-image: url('../assets/Platform-img/platform-bike-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 333px;
+    position: relative;
+}
+.item-bg img{
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
