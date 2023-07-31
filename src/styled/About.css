@@ -16,6 +16,7 @@
 .about-wrap .top-contents > h2{
     text-align: center;
     font-size: 60px;
+    color: #232323;
     margin: 0;
     margin-bottom: 11px;
 }
@@ -52,6 +53,7 @@
     margin-right: 163px;
     font-size: 40px;
     font-weight: bold;
+    color: #232323;
 }
 .about-wrap .bottom-contents > p{
     margin: 0;

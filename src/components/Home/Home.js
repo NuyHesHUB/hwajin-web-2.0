@@ -20,8 +20,8 @@ const Home = () => {
                 </div>
                 <div className='contents-wrap'>
                     <img src={Logo} alt='logo'/>
-                    <h2>화진 로보틱스는 자사 솔루션 및 플랫폼을 준비중인 스타트업입니다.</h2>
-                    <p>개인의 다양한 가능성이 의미있는 성공으로 꽃 피울 수 있도록<br/>서비스와 기술플랫폼을 통해 더 가까이 서포트(SUPPORT)합니다.</p>
+                    <h2>화진 로보틱스는 자사 솔루션 및 플랫폼을 준비 중인 스타트업입니다.</h2>
+                    <p>개인의 다양한 가능성이 의미 있는 성공으로 꽃피울 수 있도록<br/>서비스와 기술 플랫폼을 통해 더 가까이 서포트합니다.</p>
                     <div className='content-tag'>
                         <ul>
                             <li>#기술</li>
@@ -55,7 +55,7 @@ const Home = () => {
                 <div className='divider'></div>
                 <div className='bottom-content-wrap'>
                     <h2>기술로 다양성을 꽃피우는 플랫폼</h2>
-                    <p>개인의 다양한 가능성이 의미있는 성공으로 꽃 피울 수 있도록<br/>서비스와 기술플랫폼을 통해 더 가까이 서포트(SUPPORT)합니다.</p>
+                    <p>우리는 다양한 개인들이 의미 있는 성공을 이룰 수 있도록 서비스와 기술 플랫폼을 제공하여 더 가까이 지원합니다.</p>
                 </div>
                 <div className='divider'></div>
                 {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6dlrvjzw4o7h7MUMh44l1UxDTeYaFZDaXBvQ41CsG1MVi2A/viewform?embedded=true" width="640" height="1300" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe> */}
