@@ -35,8 +35,8 @@ const Service = () => {
                     <img src={Logo} alt="logo"/>
                     <div className='service-center-text'>
                         <h3>
-                            <u>사람과 사람을 잇는 "다리"<br/>
-                            화진로보틱스</u>가 되어드리겠습니다
+                            <u>사람과 사람을 잇는 <u className='color-wrap'>"</u>다리<u className='color-wrap'>"</u><br/>
+                            <u className='color-wrap'>화진로보틱스</u></u>가 되어드리겠습니다
                         </h3>
                         <p>
                             화진로보틱스는 견적 플랫폼으로서<br className='none'/>

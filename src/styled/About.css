@@ -61,6 +61,7 @@
 @media screen and (max-width:1000px) {
     .about-wrap .top-contents{
         margin-bottom: 50px;
+        padding-top: 0;
     }
     .about-wrap .top-contents > h2{
         font-size: 40px;
@@ -71,12 +72,19 @@
     .about-wrap .bottom-contents{
         flex-direction: column;
         text-align: center;
+        margin-top: 70px;
+        margin-bottom: 40px;
     }
     .about-wrap .bottom-contents > h2{
         margin-right: 0;
     }
     .about-wrap .bottom-contents > p{
         margin-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .about-wrap .bottom-contents > p br{
+        display: none;
     }
     .about-wrap .about-img-wrap{
         height: 280px;
