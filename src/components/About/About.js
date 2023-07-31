@@ -4,7 +4,7 @@ import "../../styled/About.css";
 
 const About = () => {
     return (
-        <div id="about" className='about-wrap'>
+        <div className='about-wrap'>
             <div className='top-contents'>
                 <h2>화진 로보틱스 소개</h2>
                 <p>화진로보틱스는 자사 솔루션 및 플랫폼을 준비 중인 스타트업입니다.</p>

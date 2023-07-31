@@ -58,7 +58,8 @@ const Service = () => {
                             우리는 신뢰를 슬로건으로 한 번에서 그치지 않고 장기적인 관계를 지향하는<br/>
                             고객만족의 서비스를 제공합니다.
                         </p>
-                        <div className='service-detail-shape'>자세히보기</div>
+                        {/* <div className='service-detail-shape'>자세히보기</div> */}
+                        <div className='service-detail-shape'>#고객만족</div>
                     </div>
                     <div className='platform-right-img'>
                         <img src={Platform} alt="platformimage"/>

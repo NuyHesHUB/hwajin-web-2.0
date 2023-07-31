@@ -57,7 +57,7 @@ const Home = () => {
                     <h2>기술로 다양성을 꽃피우는 플랫폼</h2>
                     <p>우리는 다양한 개인들이 의미 있는 성공을 이룰 수 있도록 서비스와 기술 플랫폼을 제공하여 더 가까이 지원합니다.</p>
                 </div>
-                <div className='divider'></div>
+                <div id="about"  className='divider'></div>
                 {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6dlrvjzw4o7h7MUMh44l1UxDTeYaFZDaXBvQ41CsG1MVi2A/viewform?embedded=true" width="640" height="1300" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe> */}
             </div>
         </div>

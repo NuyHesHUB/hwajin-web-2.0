@@ -28,10 +28,10 @@ const Footer = () => {
                     <div style={{display:'flex',justifyContent:'space-between'}}>
                         <div>
                             <span>경기도 화성시 동탄첨단산업1로 51-9, 동탄엠타워 1619호 | </span>
-                            <span>사업자등록번호: 123-45-678910</span>
+                            <span>사업자등록번호: 323-87-01693</span>
                         </div>
                         <div className='mobile-none'>
-                            <span>© Hwajin Robotics, Inc.</span>
+                            <span>© Hwajinrobotics, Inc.</span>
                         </div>
                     </div>
                 </div>
