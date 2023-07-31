@@ -1,7 +1,7 @@
 {
   "name": "web-test",
   "version": "0.1.0",
-  "homepage": "https://nuyheshub.github.io/hwajin-full/",
+  "homepage": "http://robotos.dothome.co.kr/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
